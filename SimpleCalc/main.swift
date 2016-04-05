@@ -4,8 +4,8 @@
 //  Created by apple on 4/3/16.
 //  Copyright © 2016 apple. All rights reserved.
 //
-// Assignment 2: SimpleCalc
-// Yiying Song
+//  Assignment 2: SimpleCalc
+//  Yiying Song
 
 import Foundation
 
@@ -18,6 +18,7 @@ func input() -> String {
     return result.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
 }
 
+print("Enter an expression separated by returns")
 let firstInput = input()
 let whitespace = NSCharacterSet.whitespaceCharacterSet()
 let range = firstInput.rangeOfCharacterFromSet(whitespace)
@@ -52,8 +53,6 @@ if let test = range {
 else {
     
     // if there is no whitespace, it means it asks for simple calculation
-    print("Enter an expression separated by returns")
-    
     // converts the input string to integer
     var firstNum : Int? = Int(firstInput)
     var symbol = input()
